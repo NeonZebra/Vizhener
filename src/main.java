@@ -6,10 +6,10 @@ public class main {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Write your key: ");
+        System.out.print("Write your key: ");
         String a = scan.nextLine();
 
-        System.out.println("Write your message: ");
+        System.out.print("Write your message: ");
         String b = scan.nextLine();
 
         NewCoder sc = new NewCoder();
