@@ -3,24 +3,25 @@ import java.util.Arrays;
 
 public class main {
     public static void main(String[] args){
-        int[] a = {7, 2, 5, 8};
-        int[] b = {1, 4, 8, 8};
 
-        Scanner scan = new Scanner();
+        Scanner scan = new Scanner(System.in);
 
-        String stri = scan.nextLine();
+        System.out.println("Write your key: ");
+        String a = scan.nextLine();
 
-        SimpleTranslator st = new SimpleTranslator();
+        System.out.println("Write your message: ");
+        String b = scan.nextLine();
 
-        System.out.println(Arrays.toString(st.StrToArr(stri)));
-        System.out.println(st.ArrToStr(st.StrToArr(stri)));
+        NewCoder sc = new NewCoder();
+        String h = sc.code(a, b);
+        System.out.print("Your coded message: " + h);
 
-        SimpleCode sc = new SimpleCode();
-        int[] c = sc.code(b, a);
-        System.out.println(Arrays.toString(c));
+        System.out.println();
 
-        SimpleDecoder sd = new SimpleDecoder();
-        int[] d = sd.decode(b, c);
-        System.out.println(Arrays.toString(d));
+        NewCoder sd = new NewCoder();
+        String v = sd.decode(a, h);
+        //System.out.println(Arrays.toString(d));
+
+        System.out.print("Your decoded message: " + v);
     }
 }
